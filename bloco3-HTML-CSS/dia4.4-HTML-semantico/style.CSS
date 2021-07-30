@@ -1,0 +1,13 @@
+#titulo {
+  font-size: 20px;
+  text-align: center;
+  color: firebrick;
+  border: 4px solid black;
+  margin-top: 10px;
+}
+
+.links {
+  border: goldenrod 4px solid;
+  text-align: center;
+  color: blue;
+}
