@@ -41,3 +41,13 @@ table {
 tr, td {
   border: 1px solid black;
 }
+
+#start {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+body {
+  background-color: rgba(59, 226, 87, 0.322);
+}
