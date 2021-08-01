@@ -8,8 +8,9 @@
 
 .links {
   border: goldenrod 4px solid;
+  color: blue; 
   text-align: center;
-  color: blue;
+
 }
 
 #camarao {
@@ -46,6 +47,17 @@ tr, td {
   text-align: center;
   font-size: 20px;
   margin-top: 25px;
+  color: darkblue;
+}
+
+#visao {
+  width: 70%;
+  font-size: 20px;
+  color: darkslategray;
+}
+
+#olho {
+  width: 70%;
 }
 
 body {
