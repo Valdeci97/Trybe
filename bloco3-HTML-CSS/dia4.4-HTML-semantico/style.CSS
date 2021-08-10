@@ -60,6 +60,13 @@ tr, td {
   width: 70%;
 }
 
+#soco {
+  text-align: center;
+  width: 70%;
+  color: darkslategray;
+  font-size: 20px;
+}
+
 body {
   background-color: rgba(59, 226, 87, 0.322);
 }
