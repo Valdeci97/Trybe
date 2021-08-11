@@ -6,16 +6,20 @@
   margin-bottom: 20px;
 }
 
-.links {
-  border: goldenrod 4px solid;
-  color: blue; 
-  text-align: center;
 
+.asider {
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  right: 0;
+  top: 30px;
+  text-align: center;
 }
 
 #camarao {
-  width: 600px;
+  width: 650px;
   float: right;
+  margin-right: 15%;
 }
 
 .introduction {
@@ -29,6 +33,7 @@
 #comeco {
   font-family: cursive;
   font-size: 16px;
+  color: rgba(38, 22, 179, 0.904);
 }
 
 table {
@@ -36,7 +41,7 @@ table {
   height: 178px;
   width: 178px;
   display: inline-block;
-  position: absolute; left: 250px; right: 50px; top: auto;
+  position: absolute; left: 150px; right: 100px; top: auto;
 }
 
 tr, td {
@@ -83,6 +88,20 @@ max-height: 380px;
   max-height: 380px;
 }
 
+.footer {
+  text-align: center;
+  font-size: 20px;
+  color: darkgreen;
+}
+
+.contact {
+  display: inline;
+}
+
+#logos {
+  text-align: center;
+}
+
 body {
-  background-color: rgba(59, 226, 87, 0.322);
+  background-color: rgba(255, 255, 255, 0.205);
 }
