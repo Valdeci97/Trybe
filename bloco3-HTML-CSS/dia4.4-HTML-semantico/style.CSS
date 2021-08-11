@@ -67,6 +67,22 @@ tr, td {
   font-size: 20px;
 }
 
+#pata {
+width: 70%;
+max-height: 380px;
+}
+
+#dom-pistolon {
+  width: 70%;
+  font-size: 20px;
+  color: darkslategray;
+}
+
+#movimento {
+  width: 70%;
+  max-height: 380px;
+}
+
 body {
   background-color: rgba(59, 226, 87, 0.322);
 }
