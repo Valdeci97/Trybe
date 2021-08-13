@@ -25,3 +25,20 @@ function media(numbers) {
 }
 
 //console.log(media(numbers));
+
+//Exercício 4
+function analisaMedia(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    somatorio = somatorio + numbers[i];
+  }
+  let media = (somatorio / numbers.length);
+  if (media > 20) {
+    return 'Maior que vinte';
+  } else {
+    return 'Menor que vinte';
+  }
+}
+
+//console.log(analisaMedia(numbers));
+
+//Exercício 5
