@@ -15,3 +15,13 @@ function sigma(numbers){
 }
 
 //console.log(sigma(numbers));
+
+//Exercício 3
+function media(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    somatorio = somatorio + numbers[i];
+  }
+  return (somatorio / numbers.length);
+}
+
+//console.log(media(numbers));
