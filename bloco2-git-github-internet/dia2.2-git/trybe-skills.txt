@@ -1,0 +1,8 @@
+React
+JavaScript
+GitHub
+Git
+Node.JS
+HTML
+CSS
+Python
