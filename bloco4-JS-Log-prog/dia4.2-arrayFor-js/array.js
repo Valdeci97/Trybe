@@ -56,3 +56,19 @@ function maiorValor(numbers) {
 //console.log(maiorValor(numbers));
 
 //Exercício 6
+
+let numeroImpar = [];
+
+function analisaNumeroImpar(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 !== 0) {
+      numeroImpar.push(numbers[i]);
+    }
+    if (numeroImpar === null) {
+      return 'Nenhum valor no array é um número ímpar.'
+    }
+  }
+  return numeroImpar;
+}
+
+console.log(analisaNumeroImpar(numbers));
