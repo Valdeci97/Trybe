@@ -42,3 +42,17 @@ function analisaMedia(numbers) {
 //console.log(analisaMedia(numbers));
 
 //Exercício 5
+let maior = 0;
+
+function maiorValor(numbers) {
+  for (let item of numbers) {
+    if (item > maior) {
+      maior = item;
+    }
+  }
+  return maior;
+}
+
+//console.log(maiorValor(numbers));
+
+//Exercício 6
