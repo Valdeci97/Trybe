@@ -71,4 +71,21 @@ function analisaNumeroImpar(numbers) {
   return numeroImpar;
 }
 
-console.log(analisaNumeroImpar(numbers));
+//console.log(analisaNumeroImpar(numbers));
+
+//Exercício 7
+let menor = 0;
+
+function menorValor(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (i === 0) {
+      menor = numbers[i];
+    }
+    if (menor > numbers[i]) {
+      menor = numbers[i];
+    }
+  }
+  return menor;
+}
+
+//console.log(menorValor(numbers));
