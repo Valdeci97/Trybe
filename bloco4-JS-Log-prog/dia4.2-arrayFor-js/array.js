@@ -89,3 +89,13 @@ function menorValor(numbers) {
 }
 
 //console.log(menorValor(numbers));
+
+//Exercício 8
+
+let list = [];
+
+for (let i = 1; i <= 25; i += 1) {
+  list.push(i);
+}
+
+//console.log(list);
