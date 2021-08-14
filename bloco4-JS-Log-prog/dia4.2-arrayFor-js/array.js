@@ -99,3 +99,12 @@ for (let i = 1; i <= 25; i += 1) {
 }
 
 //console.log(list);
+
+//exerício 9
+let listTwo = [];
+
+for (let i = 1; i <= 25; i += 1) {
+  listTwo.push(i / 2);
+}
+
+//console.log(listTwo);
