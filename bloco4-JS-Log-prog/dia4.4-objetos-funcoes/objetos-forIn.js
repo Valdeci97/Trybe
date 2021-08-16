@@ -6,7 +6,15 @@ let info = {
 
 console.log('Bem vinda, ' + info.personagem + '!');
 
-info['recorrente'] = 'sim';
+  info['recorrente'] = 'sim';
 //Ou info.recorrente = 'sim';
 
 console.log(info);
+
+for(item in info){
+  console.log(item);
+};
+
+for(item in info){
+  console.log(info[item]);
+};
