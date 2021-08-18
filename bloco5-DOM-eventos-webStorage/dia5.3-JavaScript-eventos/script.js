@@ -96,3 +96,26 @@ function displayFridays(fridaysArray) {
 
 let dezFridays = [ 4, 11, 18, 25 ];
 displayFridays(dezFridays);
+
+function zoomInDay(){
+  let zoomIn = document.querySelector('#days');
+
+  zoomIn.addEventListener('mouseover', function(event){
+    event.target.style.fontSize = '35px';
+    event.target.style.fontWeight = '450px';
+    event.target.style.backgroundColor = 'lightBlue';
+  })
+};
+
+function zoomOutDay(){
+  let zoomOut = document.querySelector('#days');
+
+  zoomOut.addEventListener('mouseout', function(event){
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '0px';
+    event.target.style.backgroundColor = '#eee';
+  })
+};
+
+zoomInDay();
+zoomOutDay();
