@@ -127,4 +127,14 @@ function createTasks(String){
   task.appendChild(span);
 }
 
-createTasks('Goku');
+createTasks('Exercitando Eventos');
+
+function createNewDiv(cor){
+  let newDiv = document.createElement('div');
+  newDiv.classList.add('task')
+  newDiv.style.backgroundColor = cor;
+  let conexion = document.querySelector('.my-tasks');
+  conexion.appendChild(newDiv);
+}
+
+createNewDiv('green');
