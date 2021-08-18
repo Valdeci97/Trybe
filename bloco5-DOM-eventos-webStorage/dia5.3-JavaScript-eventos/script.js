@@ -119,3 +119,12 @@ function zoomOutDay(){
 
 zoomInDay();
 zoomOutDay();
+
+function createTasks(String){
+  let task = document.querySelector('.my-tasks');
+  let span = document.createElement('span');
+  span.innerHTML = String;
+  task.appendChild(span);
+}
+
+createTasks('Goku');
