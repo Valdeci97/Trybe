@@ -153,3 +153,22 @@ function setTaskClass() {
 };
 
 setTaskClass();
+
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected'); //variável para mudança de classe
+  let days = document.querySelector('#days'); // seliciona os dias do calendário
+  let taskDiv = document.querySelector('.task'); //Variável que seliciona a div de tarefas
+  let taskColor = taskDiv.style.backgroundColor; // variável que recebe as informações da div de tarefas
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color; //recebe características do evento
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
