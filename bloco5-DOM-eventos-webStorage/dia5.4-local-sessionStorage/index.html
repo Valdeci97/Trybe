@@ -10,12 +10,79 @@
 </head>
 <body>
   <h1 id="text">Um site para leitura, apenas.</h1>
-  <main>
-    <section id="first-part">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta nesciunt odit, placeat eveniet deserunt ipsum tempore mollitia tenetur natus at! Rem neque quasi eius vitae, magni dolorem aut ad natus. <br>
-      Eis então o x da questão.
-    </section>
-  </main>
+  <section class='button-container'>
+    <div id="backgroundColor">
+      <span>Alterar cor de fundo</span>
+      <button>white</button>
+      <button>green</button>
+      <button>blue</button>
+      <button>orange</button>
+    </div>
+    <div id="textColor">
+      <span>Cor do texto</span>
+      <button>black</button>
+      <button>grey</button>
+      <button>red</button>
+      <button>blue</button>
+    </div>
+    <div id="fontSize">
+      <span>Alterar tamanho da fonte</span>
+      <button>20px</button>
+      <button>25px</button>
+      <button>30px</button>
+      <button>40px</button>
+    </div>
+    <div id="lineHeigth">
+      <span>Alterar altura entre as linhas</span>
+      <button>1</button>
+      <button>normal</button>
+      <button>1.5</button>
+      <button>2</button>
+      <button>3</button>
+    </div>
+    <div id="fontFamily">
+      <span>Alterar tipo de fonte</span>
+      <button>Arial</button>
+      <button>Times New Roman</button>
+      <button>calibri</button>
+    </div>
+  </section>
+  <section class="flex">
+    <main>
+      <section >
+        <p id="first-part" class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta nesciunt odit, placeat eveniet deserunt ipsum tempore mollitia tenetur natus at! Rem neque quasi eius vitae, magni dolorem aut ad natus. <br>
+        Eis então o x da questão.</p>
+      </section>
+      <section>
+        <p id="second-part" class="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, doloribus voluptates autem incidunt beatae soluta temporibus accusamus quasi? Ea aut dignissimos nihil! Delectus soluta quisquam ratione, ad eligendi sint alias.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas expedita autem, corporis nulla dignissimos accusamus! Cumque veniam incidunt dolor, eos, inventore harum sit corporis, aperiam delectus pariatur facere sint a? <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequuntur, quo nostrum quos expedita molestias quibusdam porro architecto ab. Fugit nulla temporibus quisquam voluptatum soluta totam non ex molestias sit!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quae saepe expedita commodi eos non cupiditate earum alias, dolorum temporibus distinctio atque ullam ut! Voluptatem fugiat tempora vitae doloremque? Incidunt. Tendo isso em mente, vejamos então uma aplicação prática: <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aut maiores asperiores omnis debitis repudiandae? Doloremque vel fuga quo voluptas id, enim nemo laboriosam doloribus, tempora, accusantium nulla provident possimus?
+        </p>
+        <img id="goku" src="https://a-static.mlcdn.com.br/618x463/quadro-metal-goku-dragon-ball/fingsstore/zzzad4rkh/184176b6d5748d9d8ad779882c53cdfc.jpg" alt="goku, protagonista de dragon ball z">
+      </section>
+    </main>
+    <aside id="aside">
+      Para mais baboseiras é só clicar aqui: 
+      <button>
+        <a href="https://www.google.com/search?q=baboseiras&sxsrf=ALeKk01HMIiMYBhov8B5rSAfXcmieN3HWw:1629380425064&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjX7cGLm73yAhXqFrkGHVZ2AzkQ_AUoAXoECAEQAw&biw=1294&bih=637" target="_blank">baboseiras</a>
+      </button>
+      <section>
+        Talvez o seu lance não seja plantas... <br>
+        Então segue abaixo um catálogo com as melhores invenções já feitas pelas humanidade. <br>
+        <button id="humankind">
+          <a href="https://www.tecmundo.com.br/ciencia/45705-conheca-21-das-maiores-invencoes-da-humanidade.htm" target="_blank">Invenções</a>
+        </button>
+        <br>
+        Tem também dos braseileiros: 
+        <button id="brasuca">
+          <a href="https://www.consumidormoderno.com.br/2017/05/08/20-invencoes-brasil-brasileiros/" target="_blank">20 invenções brasileiras \o/</a>
+        </button>
+      </section>
+    </aside>
+  </section>
 </body>
 <script src="script.js"></script>
 </html>

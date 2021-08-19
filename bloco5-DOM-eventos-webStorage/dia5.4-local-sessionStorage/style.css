@@ -12,3 +12,41 @@ header{
   color: firebrick;
   text-align: center;
 }
+
+#first-part, #second-part{
+  width: 75%;
+  font-family: cursive;
+  color: black;
+}
+
+#goku{
+  border-radius: 200px;
+  width: 350px;
+  height: 350px;
+  margin-left: 35%;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+main{
+  flex: 1;
+}
+
+#aside{
+  width: 350px;
+}
+
+#humankind{
+  margin-left: 125px;
+  background-color: lightgrey;
+  margin-top: 4px;
+}
+
+#brasuca{
+  margin-left: 75px;
+  background-color: lightgreen;
+  margin-top: 4px;
+}
