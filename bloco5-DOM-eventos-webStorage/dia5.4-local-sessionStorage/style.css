@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(189, 196, 221);
+}
+
+header{
+  font-size: 25px;
+  font-weight: 20px;
+}
+
+#text {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: firebrick;
+  text-align: center;
+}
