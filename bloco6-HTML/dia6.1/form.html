@@ -9,7 +9,15 @@
 </head>
 <body>
   <fieldset>
-    Nome: <input type="text" data-ls-module="charCounter" maxlength="40" name="nome" placeholder="Digite seu nome completo" required>
+    Nome: <input type="text" maxlength="40" name="name" placeholder="Digite seu nome completo" required><br>
+    E-mail: <input type="text" maxlength="50" name="email" placeholder="Digite seu e-mail" autocomplete="off" required><br>
+    CPF: <input type="text" maxlength="11" name="cpf" placeholder="-x-x-x-x-x-" autocomplete="off" required><br>
+    Endereço: <input type="text" maxlength="200" name="adress" placeholder="Rua do fundão, 34." autocomplete="off" required><br>
+    Cidade: <input type="text" maxlength="28" name="street" placeholder="Marília" autocomplete="off" required><br>
+    <label>Estado:
+      <select name="state" id="state" required></select>
+    </label>
   </fieldset>
+  <script src='script.js'></script>
 </body>
 </html>
