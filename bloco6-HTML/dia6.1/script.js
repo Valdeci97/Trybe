@@ -4,7 +4,7 @@ function createOptions() {
 
   for (let index = 0; index < estados.length; index += 1) {
     let createOptions = document.createElement('option');
-    states.appendChild(createOptions).innerText = estados[index];
+    states.appendChild(createOptions).innerHTML = estados[index];
     states.appendChild(createOptions).value = estados[index];
   }
 };

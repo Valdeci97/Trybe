@@ -8,16 +8,28 @@
   <title>Curriculo</title>
 </head>
 <body>
-  <fieldset>
-    Nome: <input type="text" maxlength="40" name="name" placeholder="Digite seu nome completo" required><br>
-    E-mail: <input type="text" maxlength="50" name="email" placeholder="Digite seu e-mail" autocomplete="off" required><br>
-    CPF: <input type="text" maxlength="11" name="cpf" placeholder="-x-x-x-x-x-" autocomplete="off" required><br>
-    Endereço: <input type="text" maxlength="200" name="adress" placeholder="Rua do fundão, 34." autocomplete="off" required><br>
-    Cidade: <input type="text" maxlength="28" name="street" placeholder="Marília" autocomplete="off" required><br>
-    <label>Estado:
-      <select name="state" id="state" required></select>
-    </label>
-  </fieldset>
+  <section id="father">
+    <fieldset id="first">
+      Nome: <input type="text" maxlength="40" name="name" placeholder="Digite seu nome completo" required>
+      E-mail: <input type="text" maxlength="50" name="email" placeholder="Digite seu e-mail" autocomplete="off" required>
+      CPF: <input type="text" maxlength="11" name="cpf" placeholder="-x-x-x-x-x-" autocomplete="off" required>
+      Endereço: <input type="text" maxlength="200" name="adress" placeholder="Rua do fundão, 34." autocomplete="off" required>
+      Cidade: <input type="text" maxlength="28" name="street" placeholder="Marília" autocomplete="off" required>
+      <label>Estado:
+        <select name="state" id="state" required></select>
+      </label class="home-adress">
+        Casa<input name="home" type="radio">
+        Apartamento<input name="home" type="radio">
+      </label>
+    </fieldset>
+    <fieldset id="second">
+      Resumo do currículo: 
+      <textarea name="vitae" id="crcl" cols="30" rows="7" maxlength="1000" required></textarea>
+      Descrição do cargo: 
+      <textarea name="cargo" id="cargo" cols="30" rows="7" maxlength="500" required></textarea>
+      <input type="date" required>
+    </fieldset>
+  </section>
   <script src='script.js'></script>
 </body>
 </html>

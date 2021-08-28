@@ -1,2 +1,23 @@
-#information{
+body {
+  background-color:darkseagreen;
+  margin: 0;
+}
+
+#father {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#first {
+  display: flex;
+  flex-flow: column;
+}
+
+#second {
+  display: flex;
+  flex-flow: column;
+}
+
+#state {
+  margin: 10px;
 }
