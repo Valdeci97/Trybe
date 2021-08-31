@@ -62,3 +62,19 @@ const longestWord = text => text.split(' ').sort((wordA, wordB) => wordB.length 
 //Essa função retorna o comprimento desses parâmetros de forma crescente a partir da posição 1 (index === 0).
 
 console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"));
+
+//Exercício 4 
+const changeX = (str) => {
+  let words = str.split(' ');
+  const parameter = 'Goku';
+  for (word of words) {
+    let letter = word.split('');
+    for (letter of word) {
+      if (letter === 'x') {
+        words = parameter;
+      }
+    }
+  }
+}
+
+console.log(changeX('Trybe x aqui'));
