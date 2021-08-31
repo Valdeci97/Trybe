@@ -1,0 +1,16 @@
+* {
+  background-color: cadetblue;
+  font-size: 16px;
+  font-family: 'ubuntu';
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.btn {
+  margin: 5px;
+  background-color: chocolate;
+  color: white;
+}
