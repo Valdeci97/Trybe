@@ -26,3 +26,18 @@ test('Testa a implementação da função concatString para três parâmetros co
   expect(object.concatString).toHaveBeenCalledTimes(1);
   expect(object.concatString).toHaveBeenCalledWith('Espeto', 'de', 'gato');
 });
+
+test('Testa implementação da função upperCase em caixa baixa e restaura para caixa alta', () => {
+  const spy = jest.spyOn(object, 'upperCase').mockImplementation((word) => word.toLowerCase());
+
+  expect(spy('HulK')).toBe('hulk');
+  expect(spy).toHaveBeenCalled();
+  expect(spy).toHaveBeenCalledTimes(2);
+  expect(spy).toHaveBeenCalledWith('HulK');
+
+  object.upperCase.mockRestore();
+
+  object.upperCase = jest.fn().mockImplementation((word) => word.toUpperCase());
+
+  expect(object.upperCase('reino')).toBe('REINO');
+});
