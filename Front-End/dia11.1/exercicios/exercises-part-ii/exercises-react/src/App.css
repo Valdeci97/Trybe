@@ -1,0 +1,41 @@
+:root {
+  --cor1: rgb(139, 113, 209);
+  --cor2: rgb(201, 218, 224);
+  --cor3: rgb(91, 165, 94);
+  --cor4: rgb(131, 129, 115);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root > h1 {
+  margin: 8px;
+  text-align: center;
+  padding: 7.8px;
+  color: var(--cor4);
+}
+
+.content {
+  text-align: center;
+  color: var(--cor3);
+  margin: 12px 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin: 7.99px 0px;  
+}
+
+.card > p {
+  margin: 10px 0px;
+}
+
+.footer {
+  background-color: var(--cor1);
+  text-align: center;
+  color: var(--cor2);
+}
