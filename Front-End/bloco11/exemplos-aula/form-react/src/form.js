@@ -62,26 +62,28 @@ class Form extends React.Component {
     return (
       <section>
         <form>
-          <label htmlFor="name">
-            Nome: <input
-              id="name"
-              type="text" 
-              name="name" 
-              placeholder="Seu nome aqui"
-              onChange={ this.handleChange }
-              value={ name }
-              ></input>
-          </label>
-          <label htmlFor="email">
-            Email: <input
-              id="email"
-              type="text"
-              name="email"
-              placeholder="joao.marcilio23@gmail.com"
-              onChange={ this.handleChange }
-              value={ email }
-              ></input>
-          </label>
+          <fieldset>
+            <label htmlFor="name">
+              Nome: <input
+                id="name"
+                type="text" 
+                name="name" 
+                placeholder="Seu nome aqui"
+                onChange={ this.handleChange }
+                value={ name }
+                ></input>
+            </label>
+            <label htmlFor="email">
+              Email: <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="joao.marcilio23@gmail.com"
+                onChange={ this.handleChange }
+                value={ email }
+                ></input>
+            </label>
+          </fieldset>
           Estado: 
           <select name="estado" onChange={ this.handleChange } value={ estado }>
             <option value="sp">São Paulo</option>
@@ -91,6 +93,7 @@ class Form extends React.Component {
           </select>
           Conte sobre as coisas preferidas que há em seu estado: <textarea name="aboutCity" onChange={ this.handleChange } value={ aboutCity }></textarea>
           <input name="terms" type="checkbox" onChange={ this.handleChange } value={ terms }></input>
+          <input type="file"></input>
         </form>
       </section>
     )
