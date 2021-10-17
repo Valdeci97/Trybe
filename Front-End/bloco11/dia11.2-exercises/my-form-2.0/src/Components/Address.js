@@ -10,7 +10,8 @@ class Address extends Component {
         <input
         type="text"
         maxLength="200"
-        name='address'
+        placeholder="Rua Antônio Seixas, 200"
+        name="address"
         value={ address }
         onChange={ handleChange }
         required></input>

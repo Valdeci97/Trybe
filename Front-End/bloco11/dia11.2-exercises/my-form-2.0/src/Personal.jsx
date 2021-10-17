@@ -22,13 +22,51 @@ class Personal extends Component {
     }
     
     this.handleChange = this.handleChange.bind(this);
+    this.lookingFor = this.lookingFor.bind(this);
+    this.onBlurEvent  = this.onBlurEvent.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
   handleChange({ target }) {
     const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value
+    let value = target.type === 'checkbox' ? target.checked : target.value
+    if (name === 'name') value = value.toUpperCase();
+    if (name === 'address') value = this.lookingFor(value)
 
     this.setState({ [name]: value });
+  }
+
+  lookingFor(element) {
+    return element.replace(/[^\w\s]/gi, '');
+  }
+
+  updateState(name, value) {
+    this.setState((state) => ({
+      [name]: value,
+      formError: {
+        ...state.formError,
+        [name]: this.validateField(name, value)
+      }
+    }));
+  }
+
+  validateField(fieldName, value) {
+    switch (fieldName) {
+      case 'email':
+        const isValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2})$/i)
+        return isValid ? '' : ' is invalid';
+      default:
+        break;
+    }
+    return '';
+  }
+
+
+  onBlurEvent({ target }) {
+    let { name, value } = target;
+    if (name === 'city') value = value.match(/^\d/) ? '' : value;
+
+    this.updateState(name, value);
   }
 
   render() {
@@ -40,9 +78,9 @@ class Personal extends Component {
         <Email name={ email } handleChange={ this.handleChange }/>
         <CPF name={ cpf }  handleChange={ this.handleChange }/>
         <Address name={ address } handleChange={ this.handleChange } />
-        <City name={ city } handleChange={ this.handleChange } />
-        <State />
-        <Build />
+        <City name={ city } handleChange={ this.handleChange } onBlurEvent={ this.onBlurEvent } />
+        <State name={ estado } handleChange={ this.handleChange }/>
+        <Build name={ realState } handleChange={ this.handleChange } />
       </form>
     );
   }
