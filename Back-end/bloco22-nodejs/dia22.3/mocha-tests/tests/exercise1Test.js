@@ -41,4 +41,17 @@ describe('Executa a função signedNumber', () => {
       });
     });
   });
+
+  describe('Teste para x não numérico', () => {
+    describe('Resposta', () => {
+      it('Uma string', () => {
+        const result = signedNumber('a');
+        expect(result).a('string');
+      });
+      it('Mensagem', () => {
+        const result = signedNumber('a');
+        expect(result).match(/o valor deve ser um número/i);
+      });
+    });
+  });
 });
