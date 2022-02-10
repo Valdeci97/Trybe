@@ -14,7 +14,7 @@ app.post('/hello', (req, res) => {
 
 app.post('/greetings', (req, res) => {
   const { name, age } = req.body;
-  if (age < 17) {
+  if (Number(age) <= 17) {
     res.status(401).json({ "message": "unauthorized" });
   }
 
