@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const crypto = require('crypto');
 const rescue = require('express-rescue');
 const helpers  = require('./helpers/fileReader');
+const auth = require('./helpers/authMiddleware');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(auth)
 
 app.get('/ping', (_req, res) => res.json({ "message": "pong" }));
 
@@ -60,6 +63,18 @@ app.post('/simpsons', rescue(async (req, res) => {
   }
   res.status(409).json({ "message": "id already exists" });
 }));
+
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  if ([email, password, firstName, phone].includes(undefined)) {
+    return res.status(401).json({ message: 'missing fields' });
+  }
+
+  const token = crypto.randomBytes(8).toString('hex');
+
+  res.status(200).json({ token });
+})
 
 app.use(function (err, req, res, next) {
   res.status(500).send(`Algo deu errado! Mensagem: ${err.message}`);
