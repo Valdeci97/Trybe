@@ -31,8 +31,19 @@ app.put('/users/:name/:age', (req, res) => {
 app.get('/simpsons', rescue(async (_req, res) => {
   try {
     const content = await helpers.fileReader('./simpsons.json');
-    console.log(content)
     res.status(200).json(content);
+  } catch(err) {
+    res.status(500).json({ "message": "Internal server error" });
+  }
+}));
+
+app.get('/simpsons/:id', rescue(async (req, res) => {
+  const { id } = req.params;
+  try {
+    const content = await helpers.fileReader('./simpsons.json');
+    const character = content.find((char) => char.id === id);
+    if(!character) res.status(404).json({ "message": "simpson not found" });
+    res.status(200).json(character);
   } catch(err) {
     res.status(500).json({ "message": "Internal server error" });
   }
