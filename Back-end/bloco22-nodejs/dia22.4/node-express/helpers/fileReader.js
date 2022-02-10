@@ -1,5 +1,4 @@
 const fs = require('fs').promises;
-const { join } = require('path');
 
 async function fileReader(file) {
   try {
@@ -11,4 +10,8 @@ async function fileReader(file) {
   }
 }
 
-module.exports = { fileReader };
+function updateFile(file, content) {
+  return fs.writeFile(file, JSON.stringify(content));
+}
+
+module.exports = { fileReader, updateFile };

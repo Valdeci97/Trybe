@@ -49,6 +49,18 @@ app.get('/simpsons/:id', rescue(async (req, res) => {
   }
 }));
 
+app.post('/simpsons', rescue(async (req, res) => {
+  const { id, name } = req.body;
+  const content = await helpers.fileReader('./simpsons.json');
+  const character = content.find((char) => char.id === id);
+  if(!character) {
+    content.push({ id, name });
+    helpers.updateFile('./simpsons.json', content);
+    res.status(204).end();
+  }
+  res.status(409).json({ "message": "id already exists" });
+}));
+
 app.use(function (err, req, res, next) {
   res.status(500).send(`Algo deu errado! Mensagem: ${err.message}`);
 });
