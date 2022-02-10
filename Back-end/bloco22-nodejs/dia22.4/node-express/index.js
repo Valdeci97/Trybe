@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const rescue = require('express-rescue');
+const helpers  = require('./helpers/fileReader');
 
 const app = express();
 
@@ -25,6 +27,16 @@ app.put('/users/:name/:age', (req, res) => {
   const { name, age } = req.params;
   res.status(200).json({ "message": `Seu nome é ${name} e tem ${age} anos de idade` });
 });
+
+app.get('/simpsons', rescue(async (_req, res) => {
+  try {
+    const content = await helpers.fileReader('./simpsons.json');
+    console.log(content)
+    res.status(200).json(content);
+  } catch(err) {
+    res.status(500).json({ "message": "Internal server error" });
+  }
+}));
 
 app.use(function (err, req, res, next) {
   res.status(500).send(`Algo deu errado! Mensagem: ${err.message}`);
