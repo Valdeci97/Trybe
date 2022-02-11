@@ -43,4 +43,8 @@ app.get('/posts/:id', (req, res) => {
   return res.status(200).send(post);
 });
 
+app.get('/posts', (req, res) => {
+  res.status(200).send({ posts: [] });
+});
+
 app.listen(3000, () => console.log('Ouvindo na porta 3000.'));
