@@ -7,18 +7,28 @@ const PORT = 3000;
 
 app.get('/authors', async (_req, res) => {
   const authors = await Author.getAll();
-  res.status(200).send({ authors })
+  if (!authors) return res.status(404).send({ message: "Not Found" });
+  return res.status(200).send({ authors })
+});
+
+app.get('/authors/:id', async (req, res) => {
+  const { id } = req.params;
+  const author = await Author.getById(id);
+  if (!author) return res.status(404).send({ message: "Not Found!" });
+  return res.status(200).send({ author });
 });
 
 app.get('/books', async (_req, res) => {
   const books = await Books.getAll();
-  res.status(200).send({ books });
+  if (!books) return res.status(404).send({ message: "Not Found" });
+  return res.status(200).send({ books });
 });
 
 app.get('/books/:id', async (req, res) => {
   const { id } = req.params;
   const book = await Books.getById(id);
-  res.status(200).send({ book });
+  if (!book) return res.status(404).send({ message: "Not Found" });
+  return res.status(200).send({ book });
 });
 
 app.listen(PORT, () => console.log(`Running at ${PORT}`));
