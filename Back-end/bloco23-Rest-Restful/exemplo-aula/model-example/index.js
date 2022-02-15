@@ -42,4 +42,13 @@ app.post('/authors', async (req, res) => {
   return res.status(201).send({ message: 'Autor criado com sucesso.' });
 });
 
+app.post('/books', async (req, res) => {
+  const { title, author_id } = req.body;
+  if(!(await Books.isValid(title, author_id))) {
+    return res.status(400).send({ message: 'Invalid data!' });
+  }
+  await Books.createBook(title, author_id);
+  return res.status(201).send({ message: 'Book created successfully!' });
+});
+
 app.listen(PORT, () => console.log(`Running at ${PORT}`));
