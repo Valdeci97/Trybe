@@ -1,7 +1,7 @@
 const express = require('express');
-const cepHandler = require('../middlewares/cepHandler');
+const cepHandler = require('../services/cepHandler');
 const formater = require('../helpers/cepFormater');
-const { getCep } = require('../controller/findCep');
+const { getCep } = require('../models/findCep');
 
 const router = express.Router();
 

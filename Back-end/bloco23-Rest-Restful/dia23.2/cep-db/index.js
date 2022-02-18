@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const cep = require('./routes/cep');
+const cep = require('./controller/cep');
 
 const PORT = process.env.PORT;
 
