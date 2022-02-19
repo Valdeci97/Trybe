@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cep = require('./controller/cep');
+const cepPost = require('./controller/cepPost');
 
 const PORT = process.env.PORT;
 
@@ -13,5 +14,6 @@ app.get('/ping', (_req, res) => {
 });
 
 app.use('/cep', cep);
+app.use('/cep', cepPost);
 
 app.listen(PORT, () => console.log(`Running at port ${PORT}`));

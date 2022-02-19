@@ -1,5 +1,5 @@
 const express = require('express');
-const cepHandler = require('../services/cepHandler');
+const cepHandler = require('../middlewares/cepHandler');
 const formater = require('../helpers/cepFormater');
 const { getCep } = require('../models/findCep');
 
