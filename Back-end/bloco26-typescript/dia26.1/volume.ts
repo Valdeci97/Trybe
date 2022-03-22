@@ -5,7 +5,7 @@ const raiseVolumeError = (unit: string) => {
 };
 
 const volumeConvert = (value: number, base: string, target: string): number => {
-if (!volumeUnits.includes(base)) raiseVolumeError(base);
+  if (!volumeUnits.includes(base)) raiseVolumeError(base);
   if (!volumeUnits.includes(target)) raiseVolumeError(target);
 
   const baseIndex = volumeUnits.indexOf(base);

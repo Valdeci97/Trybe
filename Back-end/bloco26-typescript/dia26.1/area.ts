@@ -1,4 +1,4 @@
-const areaUnits: string[] = ['km²', 'hm²', 'dam²', 'm²', 'dcm²', 'cm²', 'mm²'];
+const areaUnits: string[] = ['km²', 'hm²', 'dam²', 'm²', 'dm²', 'cm²', 'mm²'];
 
 const raiseAreaError = (unit: string) => {
   throw new Error(`A unidade ${unit} não é válida`);
