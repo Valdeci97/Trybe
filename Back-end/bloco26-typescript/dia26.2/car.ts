@@ -13,8 +13,8 @@ enum Directions {
 enum Doors {
   driver = 'Motorista',
   ride = 'Carona',
-  behind_driver = 'Pessoa atrá do motorista',
-  behind_ride = 'Pessoa atrá do carona',
+  behind_driver = 'Pessoa atrás do motorista',
+  behind_ride = 'Pessoa atrás do carona',
 };
 
 class Car {
@@ -32,7 +32,7 @@ class Car {
     const options: string[] = [
       'Motorista',
       'Carona',
-      'Pessoa atrá do motorista',
+      'Pessoa atrás do motorista',
       'Pessoa atrás do carona'
     ];
 
@@ -58,16 +58,52 @@ class Car {
   openTheDoor(door: Doors): void {
     const isValid = this.validateDoors(door);
     if (!isValid) console.log(`A porta ${door} não é válida`);
-    console.log(`Abrindo a porta ${door}`);
+    console.log(`Abrindo a porta ${door}.`);
   };
 
   closeTheDoor(door: Doors): void {
     const isValid = this.validateDoors(door);
     if (!isValid) console.log(`A porta ${door} não é válida`);
-    console.log(`Fechando a porta ${door}`);
+    console.log(`Fechando a porta ${door}.`);
   };
 };
 
-const carro = new Car('Ford', Color.black, 2);
+const carro = new Car('Volkswagen', Color.silver, 4);
 
-console.log(carro.openTheDoor(Doors.driver));
+carro.openTheDoor(Doors.driver);
+carro.closeTheDoor(Doors.driver);
+carro.turnOn();
+carro.speedUp();
+carro.speedUp();
+carro.speedDown();
+carro.turn(Directions.left);
+carro.speedUp();
+carro.speedDown();
+carro.turn(Directions.right);
+carro.speedUp();
+carro.speedUp();
+carro.speedDown();
+carro.turn(Directions.right);
+carro.speedDown();
+carro.stop();
+carro.honk();
+carro.openTheDoor(Doors.behind_ride);
+carro.closeTheDoor(Doors.behind_ride);
+carro.speedUp();
+carro.turn(Directions.right);
+carro.speedUp();
+carro.speedUp();
+carro.speedDown();
+carro.turn(Directions.left);
+carro.turn(Directions.left);
+carro.speedUp();
+carro.speedDown();
+carro.turn(Directions.right);
+carro.turn(Directions.right);
+carro.speedDown();
+carro.stop();
+carro.turnOff();
+carro.openTheDoor(Doors.behind_ride);
+carro.closeTheDoor(Doors.behind_ride);
+carro.turnOn();
+console.log('Here we go again...');
