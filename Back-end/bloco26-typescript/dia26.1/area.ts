@@ -4,7 +4,7 @@ const raiseAreaError = (unit: string) => {
   throw new Error(`A unidade ${unit} não é válida`);
 };
 
-const massConvert = (value: number, base: string, target: string): number => {
+const AreaConvert = (value: number, base: string, target: string): number => {
   if (!areaUnits.includes(base)) raiseAreaError(base);
   if (!areaUnits.includes(target)) raiseAreaError(target);
 
@@ -15,4 +15,4 @@ const massConvert = (value: number, base: string, target: string): number => {
   return value * 10 ** (exp * 2);
 }
 
-console.log(massConvert(1, 'm²', 'km²'));
+console.log(AreaConvert(1, 'm²', 'km²'));
